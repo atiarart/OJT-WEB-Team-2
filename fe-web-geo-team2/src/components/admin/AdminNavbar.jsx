@@ -46,6 +46,18 @@ export default function AdminNavbar() {
                 Data Pendaftar
               </NavLink>
             </li>
+<li className="nav-item">
+              <NavLink to="/admin/daftar-pelatihan" className="nav-link">
+                Daftar Pelatihan
+              </NavLink>
+            </li>
+            
+<li className="nav-item">
+              <NavLink to="/admin/kategori-pelatihan" className="nav-link">
+                Kategori Pelatihan
+              </NavLink>
+            </li>
+
             <li className="nav-item ms-3">
               <button onClick={handleLogout} className="btn btn-danger btn-sm">
                 Logout ({user?.username || "Admin"})

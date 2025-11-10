@@ -20,6 +20,13 @@ import AuthPage from "./pages/admin/AuthPage"
 import DashboardAdmin from "./pages/admin/DashboardAdmin";
 import DataPendaftar from "./pages/admin/DataPendaftar";
 import DataPendaftarEdit from "./pages/admin/DataPendaftarEdit";
+import DaftarPelatihan from "./pages/admin/DaftarPelatihan";
+import DaftarPelatihanCreate from "./pages/admin/DaftarPelatihanCreate";
+import DaftarPelatihanEdit from "./pages/admin/DaftarPelatihanEdit";
+import KategoriPelatihan from "./pages/admin/KategoriPelatihan";
+import KategoriPelatihanCreate from "./pages/admin/KategoriPelatihanCreate";
+import KategoriPelatihanEdit from "./pages/admin/KategoriPelatihanEdit";
+
 import AdminApproval from "./pages/admin/AdminApproval";
 import AdminNavbar from "./components/admin/AdminNavbar";
 import { useAuth } from "./context/AuthContext"
@@ -42,7 +49,7 @@ export default function App() {
     }
 
   return (
-    <>8
+    <>
     <CurrentNavbar />
           <Routes>
             {/* Halaman publik*/}
@@ -52,7 +59,7 @@ export default function App() {
             <Route path="/pendaftaran" element={<Pendaftaran />} />
             <Route path="/admin" element={<AuthPage />} />
 
-            {/* halaman admin yg bisa */}
+            {/* halaman hanya admin yg bisa */}
             <Route path="/admin/dashboard" element={<ProtectedRoute>
               <DashboardAdmin />
             </ProtectedRoute>} />
@@ -61,6 +68,24 @@ export default function App() {
               </ProtectedRoute>} />
             <Route path="/admin/data-pendaftar-edit/:id" element={<ProtectedRoute>
               <DataPendaftarEdit />
+            </ProtectedRoute>} />
+            <Route path="/admin/daftar-pelatihan" element={<ProtectedRoute>
+              <DaftarPelatihan />
+            </ProtectedRoute>} />
+            <Route path="/admin/daftar-pelatihan-create" element={<ProtectedRoute>
+              <DaftarPelatihanCreate />
+            </ProtectedRoute>} />
+            <Route path="/admin/daftar-pelatihan-edit" element={<ProtectedRoute>
+              <DaftarPelatihanEdit />
+            </ProtectedRoute>} />
+            <Route path="/admin/kategori-pelatihan" element={<ProtectedRoute>
+              <KategoriPelatihan />
+            </ProtectedRoute>} />
+            <Route path="/admin/kategori-pelatihan-create" element={<ProtectedRoute>
+              <KategoriPelatihanCreate />
+            </ProtectedRoute>} />
+            <Route path="/admin/kategori-pelatihan-edit" element={<ProtectedRoute>
+              <KategoriPelatihanEdit />
             </ProtectedRoute>} />
 
             {/* halaman khusus superadmin */}
