@@ -16,8 +16,6 @@ export default function DataPendaftarEdit() {
   const [emailPeserta, setEmailPeserta] = useState("");
   const [pelatihan, setPelatihan] = useState("");
 
-  
-
   useEffect(() => {
     fetchDataById();
   }, []);
@@ -271,7 +269,7 @@ export default function DataPendaftarEdit() {
           </div>
 
           <button className="btn btn-primary" type="submit">
-            Daftar Pelatihan
+            Simpan Perubahan
           </button>
         </div>
       </form>

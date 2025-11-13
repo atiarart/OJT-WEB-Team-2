@@ -49,12 +49,12 @@ export default function Pendaftaran() {
   };
 
   return (
-    <section className="bg-light py-5 mt-3">
+    <section className="bg-light py-3 mt-2">
       <form onSubmit={handleSubmit}>
-        <div className="container">
+        <div className="container ">
           <h3 className="text-center">Data Institusi / Lembaga </h3>
 
-          <div className="mb-3 row">
+          <div className=" row mb-1 g-1">
             <label htmlFor="institusi" className="col-sm-2 col-form-label">
               Nama Institusi / Lembaga
             </label>
@@ -70,7 +70,7 @@ export default function Pendaftaran() {
             </div>
           </div>
 
-          <div className="mb-3 row">
+          <div className=" row mb-1 g-1">
             <label htmlFor="alamat" className="col-sm-2 col-form-label">
               Alamat
             </label>
@@ -86,7 +86,7 @@ export default function Pendaftaran() {
             </div>
           </div>
 
-          <div className="mb-3 row">
+          <div className=" row mb-1 g-1">
             <label htmlFor="telepon" className="col-sm-2 col-form-label">
               No Telepon
             </label>
@@ -102,7 +102,7 @@ export default function Pendaftaran() {
             </div>
           </div>
 
-          <div className="mb-3 row">
+          <div className=" row mb-1 g-1">
             <label htmlFor="fax" className="col-sm-2 col-form-label">
               No. Fax
             </label>
@@ -118,7 +118,7 @@ export default function Pendaftaran() {
             </div>
           </div>
 
-          <div className="mb-3 row">
+          <div className=" row mb-1 g-1">
             <label htmlFor="email" className="col-sm-2 col-form-label">
               Email
             </label>
@@ -138,7 +138,7 @@ export default function Pendaftaran() {
         <div className="container">
           <h3 className="text-center">Data Peserta </h3>
 
-          <div className="mb-3 row">
+          <div className=" row mb-1 g-1">
             <label htmlFor="namaPeserta" className="col-sm-2 col-form-label">
               Nama Lengkap
             </label>
@@ -154,7 +154,7 @@ export default function Pendaftaran() {
             </div>
           </div>
 
-          <div className="mb-3 row">
+          <div className=" row mb-1 g-1">
             <label htmlFor="telPeserta" className="col-sm-2 col-form-label">
               No Telepon Peserta
             </label>
@@ -170,7 +170,7 @@ export default function Pendaftaran() {
             </div>
           </div>
 
-          <div className="mb-3 row">
+          <div className=" row mb-1 g-1">
             <label htmlFor="emailPeserta" className="col-sm-2 col-form-label">
               Email Peserta
             </label>
@@ -186,7 +186,7 @@ export default function Pendaftaran() {
             </div>
           </div>
 
-          <div className="mb-3 row">
+          <div className=" row mb-1 g-1">
             <label htmlFor="pelatihan" className="col-sm-2 col-form-label">
               Pilih Pelatihan
             </label>
@@ -243,7 +243,7 @@ export default function Pendaftaran() {
             </div>
           </div>
 
-          <div className="text-center mb-3">
+          <div className="text-center mb-1 g-1">
           <button className="btn btn-primary" type="submit">
             Daftar Pelatihan
           </button>
@@ -252,7 +252,7 @@ export default function Pendaftaran() {
       </form>
 
 
-      <div className="mb-3 mt-3 text-center">
+      <div className="mb-1 g-1 mt-3 text-center">
         <p>---atau---</p>
         <a
           href="/Formulir_Pendaftaran.doc"

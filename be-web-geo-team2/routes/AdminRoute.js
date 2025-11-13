@@ -5,6 +5,7 @@ import superAdminOnly from '../middlewares/SuperAdminOnly.js';
 
 const router = express.Router();
 
+
 router.get('/all', auth, superAdminOnly, getAllAdmins);
 router.get('/pending', auth, superAdminOnly, getAllPendingAdmins);
 router.put('/:id/:status', auth, superAdminOnly, updateAdminStatus);
