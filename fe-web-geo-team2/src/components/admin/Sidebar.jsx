@@ -35,6 +35,13 @@ export default function Sidebar() {
             <i className="bi bi-person-lines-fill me-2"></i> Data Pendaftar
           </Nav.Link>
         </Nav.Item>
+
+        {/* Data Peserta */}
+        <Nav.Item>
+          <Nav.Link as={NavLink} to="/admin/data-peserta" className="text-white">
+            <i className="bi bi-person-lines-fill me-2"></i> Data Peserta
+          </Nav.Link>
+        </Nav.Item>
         
         {/* Daftar Pelatihan */}
         <Nav.Item>

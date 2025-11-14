@@ -6,6 +6,8 @@ import DataPendaftar from "./routes/DataPendaftarRoute.js";
 import DaftarPelatihan from "./routes/DaftarPelatihanRoute.js"
 import KategoriPelatihan from "./routes/KategoriPelatihanRoute.js"
 import jadwalRoutes from "./routes/JadwalRoutes.js"
+import DataPesertaRoute from "./routes/DataPesertaRoute.js";
+import SertifikatRoute from "./routes/SertifikatRoute.js";
 
 import AuthRoute from "./routes/AuthRoute.js"
 import AdminRoute from "./routes/AdminRoute.js"
@@ -22,6 +24,11 @@ app.use('/api', DataPendaftar)
 app.use('/api/daftar-pelatihan', DaftarPelatihan)
 app.use("/api/kategori-pelatihan", KategoriPelatihan);
 app.use("/api/jadwal", jadwalRoutes);
+app.use("/api", DataPesertaRoute);
+app.use("/api", SertifikatRoute);
+
+app.use('/uploads/bukti', express.static('uploads/bukti'));
+app.use('/uploads/sertifikat', express.static('uploads/sertifikat'));
 
 app.use('/api/auth', AuthRoute)
 app.use('/api/admin', AdminRoute)

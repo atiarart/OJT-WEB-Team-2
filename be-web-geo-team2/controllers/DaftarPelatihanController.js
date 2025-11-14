@@ -4,7 +4,7 @@ const prisma = new PrismaClient();
 
 export const getDaftarPelatihan = async (req, res) => {
   try {
-    const response = await prisma.data_pelatihan.findMany();
+    const response = await prisma.daftar_pelatihan.findMany();
     res.status(200).json(response);
   } catch (error) {
     res.status(500).json({ msg: error.message });
@@ -13,7 +13,7 @@ export const getDaftarPelatihan = async (req, res) => {
 
 export const getDaftarPelatihanById = async (req, res) => {
   try {
-    const response = await prisma.data_pelatihan.findUnique({
+    const response = await prisma.daftar_pelatihan.findUnique({
       where: {
         id_pelatihan: parseInt(req.params.id),
       },
@@ -29,7 +29,6 @@ export const createDaftarPelatihan = async (req, res) => {
 
   const {
     id_kategori,
-    nama_kategori,
     nama_pelatihan,
     tujuan,
     persyaratan,
@@ -43,10 +42,9 @@ export const createDaftarPelatihan = async (req, res) => {
   } = req.body;
 
   try {
-    const DaftarPelatihan = await prisma.data_pelatihan.create({
+    const DaftarPelatihan = await prisma.daftar_pelatihan.create({
       data: {
         id_kategori,
-        nama_kategori,
         nama_pelatihan,
         tujuan,
         persyaratan,
@@ -88,13 +86,12 @@ export const updateDaftarPelatihan = async (req, res) => {
   } = req.body;
 
   try {
-    const DaftarPelatihan = await prisma.data_pelatihan.update({
+    const DaftarPelatihan = await prisma.daftar_pelatihan.update({
       where: {
         id_pelatihan: parseInt(idPelatihan),
       },
       data: {
-        id_kategori: parseInt(idKategori), // ✅ fix disini
-        nama_kategori: namakategori,
+        id_kategori: parseInt(idKategori),
         nama_pelatihan: namaPelatihan,
         tujuan: tujuan,
         persyaratan: persyaratan,
@@ -121,7 +118,7 @@ export const deleteDaftarPelatihan = async (req, res) => {
   const { id } = req.params;
 
   try {
-    await prisma.data_pelatihan.delete({
+    await prisma.daftar_pelatihan.delete({
       where: { id_pelatihan: parseInt(id) },
     });
     res.status(200).json({ msg: "Daftar Pelatihan berhasil dihapus!" });
